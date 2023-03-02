@@ -4,5 +4,9 @@ Only the async methods are supported.
 
 Updates:
 
+1.0.2 - Fix to overcome bug in .net core 3.1 FromBase64Transform where
+        InputBlockSize was set to 1 rather than the value 4 (4 bytes input,
+        3 bytes output)
+
 1.0.1 - Fixes to async code to avoid dependency on StreamReader Peek/EndOfStream
         methods which cause non-async calls to be made.

@@ -30,8 +30,8 @@ namespace Logiten.Json
         {
             if (count == 0) return 0;
 
-            var inputBuffer = new byte[_readTransform.InputBlockSize];
-            var outputBuffer = new byte[_readTransform.OutputBlockSize];
+            var inputBuffer = new byte[4];
+            var outputBuffer = new byte[3];
             var resultCount = 0;
 
             while (resultCount < count
