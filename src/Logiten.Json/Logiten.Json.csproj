@@ -10,6 +10,8 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>JSON Stream Streaming</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/mh-logiten/json</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
