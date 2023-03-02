@@ -119,6 +119,12 @@ namespace Logiten.Json
                 if (_currentToken == JsonToken.PropertyName
                     && _currentString == propertyName)
                     return;
+
+                if (_currentToken == JsonToken.StringStart)
+                {
+                    await _reader.ReadAsync();
+                    await ConsumeStringAsync();
+                }
             }
             
             throw new InvalidOperationException(
@@ -166,7 +172,7 @@ namespace Logiten.Json
                     _currentToken = JsonToken.ObjectStart;
                     await _reader.ReadAsync();
                     break;
-
+                
                 case JsonToken.ObjectStart:
                 case JsonToken.StringEnd:
                 case JsonToken.NumberValue:
@@ -240,6 +246,30 @@ namespace Logiten.Json
                 await _reader.ReadAsync();
         }
 
+        private async Task ConsumeStringAsync()
+        {
+            bool escape = false;
+            while (_reader.EndOfStream == false)
+            {
+                var ch = await _reader.ReadAsync();
+                
+                if (_reader.EndOfStream && (escape || ch != '"'))
+                    throw new InvalidOperationException("Unterminated string detected");
+
+                if (escape)
+                {
+                    escape = false;
+                }
+                else
+                {
+                    if (ch == '\\') escape = true;
+                    else if (ch == '"') break;
+                }
+            }
+
+            _currentToken = JsonToken.StringEnd;
+        }
+        
         private async Task<string> ReadStringAsync()
         {
             var chars = new List<char>();
