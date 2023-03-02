@@ -4,12 +4,12 @@
         <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
         <PackageId>Logiten.Json</PackageId>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <Authors>Matthew Hambleton</Authors>
         <Company>Logiten Ltd.</Company>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>JSON Stream Streaming</PackageTags>
-        <PackageReadmeFile>..\..\README.md</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
