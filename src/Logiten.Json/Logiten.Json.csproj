@@ -9,12 +9,12 @@
         <Company>Logiten Ltd.</Company>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>JSON Stream Streaming</PackageTags>
-        <PackageReadmeFile>..\README.md</PackageReadmeFile>
+        <PackageReadmeFile>..\..\README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="System.Text.Json" Version="[4,8)" />
-      <None Include="..\README.md" Pack="true" PackagePath="\" />
+      <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>

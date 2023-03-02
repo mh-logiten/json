@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logiten.Json", "Logiten.Json\Logiten.Json.csproj", "{3578B0D3-DF6F-4088-B297-98BD1B640D78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logiten.Json", "src\Logiten.Json\Logiten.Json.csproj", "{3578B0D3-DF6F-4088-B297-98BD1B640D78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
