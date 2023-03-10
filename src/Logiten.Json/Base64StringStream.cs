@@ -22,6 +22,7 @@ namespace Logiten.Json
         private readonly AsyncStreamReader _reader;
         private readonly Action _onComplete;
         private bool _initialized;
+        private bool _isComplete;
 
         public Base64StringStream(AsyncStreamReader reader, Action onComplete)
         {
@@ -37,8 +38,8 @@ namespace Logiten.Json
         {
             await InitializeAsync();
             
-            if (count == 0) return 0;
-
+            if (_isComplete || count == 0) return 0;
+            
             var resultCount = 0;
 
             while (resultCount < count && resultCount < buffer.Length)
@@ -54,12 +55,13 @@ namespace Logiten.Json
                 {
                     await _reader.ReadAsync();
                     _onComplete();
+                    _isComplete = true;
                     break;
                 }
 
                 if (ValidBase64Characters.Contains((char)peek) == false)
                     throw new InvalidOperationException(
-                        "Invalid character detected in stream");
+                        "Invalid character detected in stream: " + (char)peek);
 
                 buffer[offset] = (byte)await _reader.ReadAsync();
                 offset++;

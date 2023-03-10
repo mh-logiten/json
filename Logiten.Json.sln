@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logiten.Json", "src\Logiten.Json\Logiten.Json.csproj", "{3578B0D3-DF6F-4088-B297-98BD1B640D78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logiten.Json.Tests", "tests\Logiten.Json.Tests\Logiten.Json.Tests.csproj", "{01B4EFF4-12C5-4EB2-95CE-6C3A0841F7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3578B0D3-DF6F-4088-B297-98BD1B640D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3578B0D3-DF6F-4088-B297-98BD1B640D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3578B0D3-DF6F-4088-B297-98BD1B640D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B4EFF4-12C5-4EB2-95CE-6C3A0841F7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B4EFF4-12C5-4EB2-95CE-6C3A0841F7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B4EFF4-12C5-4EB2-95CE-6C3A0841F7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B4EFF4-12C5-4EB2-95CE-6C3A0841F7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
